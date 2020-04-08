@@ -62,9 +62,7 @@ async function resizeAsync(imageOptions: ImageOptions): Promise<Buffer> {
 
     return await sharpBuffer.png().toBuffer();
   } catch ({ message }) {
-    throw new Error(
-      `It was not possible to generate splash screen '${imageOptions.src}'. ${message}`
-    );
+    throw new Error(`It was not possible to process this image: '${imageOptions.src}'. ${message}`);
   }
 }
 
