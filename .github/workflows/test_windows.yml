@@ -1,11 +1,9 @@
 name: Test Packages Windows
-
 on:
   push:
     branches: [main]
   pull_request:
     types: [opened, synchronize]
-
 jobs:
   build:
     runs-on: windows-latest
